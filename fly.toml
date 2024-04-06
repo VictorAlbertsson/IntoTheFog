@@ -1,0 +1,43 @@
+# fly.toml app configuration file generated for intothefog on 2024-04-01T15:08:32+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'intothefog'
+primary_region = 'arn'
+kill_signal = 'SIGINT'
+kill_timeout = '5s'
+
+[build]
+  image = 'itzg/minecraft-server:latest'
+
+[env]
+  AUTOSTOP_PKILL_USE_SUDO = 'TRUE'
+  AUTOSTOP_TIMEOUT_EST = '120'
+  AUTOSTOP_TIMEOUT_INIT = '600'
+  DIFFICULTY = 'normal'
+  ENABLE_AUTOSTOP = 'TRUE'
+  EULA = 'TRUE'
+  LEVEL_NAME = 'world'
+  MAX_PLAYERS = '10'
+  MEMORY = '7G'
+  MODPACK = 'https://www.dropbox.com/scl/fi/bke6fbnzwqcmjqm7xhdtx/Into-The-Fog-2.0.0-Server.zip?rlkey=8vwt8qnc554513c7tl8u02fgh&dl=1'
+  TYPE = 'FABRIC'
+  VERSION = '1.20.1'
+
+[[mounts]]
+  source = 'intothefog_data'
+  destination = '/data'
+  processes = ['app']
+
+[[services]]
+  protocol = 'tcp'
+  internal_port = 25565
+
+[[services.ports]]
+  port = 25565
+
+[[vm]]
+  memory = '8gb'
+  cpu_kind = 'shared'
+  cpus = 4
