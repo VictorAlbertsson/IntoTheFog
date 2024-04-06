@@ -21,7 +21,7 @@ kill_timeout = '5s'
   LEVEL_NAME = 'world'
   MAX_PLAYERS = '10'
   MEMORY = '7G'
-  MODPACK = 'https://www.dropbox.com/scl/fi/bke6fbnzwqcmjqm7xhdtx/Into-The-Fog-2.0.0-Server.zip?rlkey=8vwt8qnc554513c7tl8u02fgh&dl=1'
+  MODPACK = 'https://www.dropbox.com/scl/fi/z88vmq2sgh007dl53euvj/Into-The-Fog-2.0.0-Server.zip?rlkey=48fsy6ibsdu4995a5q0rsf1ad&dl=1'
   TYPE = 'FABRIC'
   VERSION = '1.20.1'
 
